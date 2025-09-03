@@ -3,7 +3,6 @@ import ErrorHandler from "../middlewares/errorMiddleware.js";
 import { Borrow } from "../models/borrowModel.js";
 import { Book } from "../models/bookModel.js";
 import { User } from "../models/userModel.js";
-import { accountVerified } from "../utils/auth.js";
 
 
 export const recordBorrowedBook = catchAsyncErrors(
