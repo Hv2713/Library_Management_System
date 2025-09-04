@@ -1,6 +1,6 @@
 import express from "express";
 import {
-  // borrowedBooks,
+  borrowedBooks,
   getBorrowedBooksForAdmin,
   recordBorrowedBook,
   returnBorrowBook,
@@ -16,7 +16,7 @@ const router = express.Router();
 router.post(
   "/record-borrow-book/:id",
   isAuthenticated,
-  isAuthroized("Admin"),
+  isAuthroized("User"),
   recordBorrowedBook
 );
 
@@ -30,7 +30,8 @@ router.get(
 router.get(
   "/my-borrowed-books",
   isAuthenticated,
-  getBorrowedBooksForAdmin
+  isAuthroized("User"),
+  borrowedBooks
 );
 
 router.put(
