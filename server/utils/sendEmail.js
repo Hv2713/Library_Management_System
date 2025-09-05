@@ -17,7 +17,7 @@ export const sendEmail = async ({email, subject, message}) => {
         });
         
         const mailOptions = {
-            from: process.env.SMTP_USER,
+            from: process.env.SMTP_FROM_EMAIL,
             to: email,
             subject,    
             html: message,

@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 import { sendVerificationCode } from "../utils/sendVerificationCode.js";
 import { sendToken } from "../utils/sendToken.js";
 import { generatePasswordResetEmailTemplate } from "../utils/emailTemplates.js";
-import { sendEmail } from "../utils/sendMail.js";
+import { sendEmail } from "../utils/sendEmail.js";
 import crypto from "crypto";
 
 export const register = catchAsyncErrors(async (req, res, next) => {
